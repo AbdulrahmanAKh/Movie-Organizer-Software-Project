@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Organizer - Project Presentation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="blur-overlay"></div>
+
+    <header>
+        <h1>🎬 Movie Organizer</h1>
+        <p class="subtitle">Advanced Programming - Qt Project</p>
+    </header>
+
+    <div class="container">
+        <div class="presentation-viewer">
+            <div class="viewer-header">
+                <h3>📊 Presentation Viewer</h3>
+                <div class="controls">
+                    <span class="slide-counter" id="slideCounter" style="display: none;"></span>
+                    <button class="btn btn-secondary" id="fullscreenBtn" style="display: none;">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                        Fullscreen
+                    </button>
+                </div>
+            </div>
+
+            <div class="upload-container">
+                <input type="file" id="fileInput" accept=".pptx">
+                <button class="btn btn-primary" id="uploadBtn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                    </svg>
+                    Upload Presentation (PPTX)
+                </button>
+            </div>
+
+            <div class="viewer-content" id="viewerContent">
+                <div class="placeholder">
+                    <svg class="icon" style="width: 64px; height: 64px;" viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                    </svg>
+                    <h3>Upload Your Presentation</h3>
+                    <p>Click the button above to select your PPTX file</p>
+                </div>
+            </div>
+
+            <div class="slide-nav" id="slideNav" style="display: none;">
+                <button class="btn btn-secondary" id="prevBtn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                    Previous
+                </button>
+                <button class="btn btn-secondary" id="nextBtn">
+                    Next
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>📦 Download Project</h2>
+            <p>Get the complete Movie Organizer source code and documentation</p>
+            <button class="download-btn" onclick="downloadProject()">
+                <svg class="icon" style="width: 32px; height: 32px;" viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Download Movie Organizer
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
