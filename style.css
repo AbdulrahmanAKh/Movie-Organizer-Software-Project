@@ -268,3 +268,48 @@ input[type="file"] { display: none; }
     h1 { font-size: 2rem; }
     .viewer-header { flex-direction: column; }
 }
+
+/* ---- QR Box ---- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    text-align: left;
+}
+
+.qr-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+    color: #a0a0a0;
+    box-shadow: 0 0 15px rgba(255,255,255,0.05);
+}
+
+.qr-box p {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background: white;
+    padding: 5px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .qr-box {
+        margin-top: 1rem;
+        align-self: center;
+    }
+}
