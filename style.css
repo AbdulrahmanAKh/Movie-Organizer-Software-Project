@@ -63,13 +63,20 @@ body {
     z-index: -1;
 }
 
-/* ---- Header ---- */
+/* ---- Header (NOW COMBINED) ---- */
 header {
     padding: 3rem 2rem;
-    text-align: center;
+    /* text-align: center; <-- THIS WAS THE PROBLEM, so it was removed. */
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Rules moved from the bottom of the file */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* Added a gap for better wrapping on medium screens */
 }
 
 h1 {
@@ -264,18 +271,9 @@ h1 {
 }
 input[type="file"] { display: none; }
 
-@media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    .viewer-header { flex-direction: column; }
-}
 
 /* ---- QR Box ---- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
+/* --- THIS header RULE WAS REMOVED --- */
 
 .header-left {
     text-align: left;
@@ -306,10 +304,20 @@ header {
     padding: 5px;
 }
 
-/* Responsive adjustment */
+/* Responsive adjustment (NOW COMBINED) */
 @media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    .viewer-header { flex-direction: column; }
+    
+    /* This rule was moved from the bottom of the file */
     .qr-box {
-        margin-top: 1rem;
+        /* margin-top: 1rem; <-- Removed, 'gap' on header handles spacing */
         align-self: center;
+    }
+
+    /* This rule makes the header stack nicely on mobile */
+    header {
+        flex-direction: column;
+        align-items: center;
     }
 }
